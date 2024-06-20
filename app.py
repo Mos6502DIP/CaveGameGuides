@@ -8,7 +8,7 @@ def landing():
         user_name = request.form['username']
         password = request.form['password']
 
-        return render_template("home.html", response="Entered the cum zone")
+        return render_template("home.html", response="Null")
     else:
         return render_template(f"home.html", response="Null")
 
