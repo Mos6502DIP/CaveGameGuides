@@ -11,7 +11,7 @@ def Login():
     if request.method == 'POST':
         Email = hash(request.form['Email'])
         Password = hash(request.form['Password'])
-
+    # UwU Nya
     return render_template("login.html")
 
 @App.route('/Register', methods=['GET', 'POST'])
