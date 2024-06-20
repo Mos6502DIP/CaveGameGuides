@@ -1,17 +1,28 @@
 from flask import Flask, send_file, request, Response, redirect, render_template
-app = Flask(__name__)
+App = Flask(__name__)
 
 
-@app.route('/', methods=['GET', 'POST'])
-def landing():
+@App.route('/', methods=['GET', 'POST'])
+def Landing():
+    return render_template("home.html")
+
+@App.route('/login', methods=['GET', 'POST'])
+def Login():
     if request.method == 'POST':
-        user_name = request.form['username']
-        password = request.form['password']
+        Email = hash(request.form['Email'])
+        Password = hash(request.form['Password'])
 
-        return render_template("home.html", response="Null")
-    else:
-        return render_template(f"home.html", response="Null")
+    return render_template("login.html")
+
+@App.route('/Register', methods=['GET', 'POST'])
+def Register():
+    if request.method == 'POST':
+        Username = request.form['Username']
+        Email = hash(request.form['Email'])
+        Password = hash(request.form['Password'])
+
+    return render_template("register.html")
 
 
 if __name__ == '__main__':
-    app.run()
+    App.run()
