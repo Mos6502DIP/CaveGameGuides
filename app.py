@@ -2,6 +2,7 @@ from flask import Flask, send_file, request, Response, redirect, render_template
 App = Flask(__name__)
 
 
+
 @App.route('/', methods=['GET', 'POST'])
 def Landing():
     return render_template("home.html")
@@ -11,7 +12,7 @@ def Login():
     if request.method == 'POST':
         Email = hash(request.form['Email'])
         Password = hash(request.form['Password'])
-    # UwU Nya
+
     return render_template("login.html")
 
 @App.route('/Register', methods=['GET', 'POST'])
