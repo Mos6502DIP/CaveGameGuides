@@ -7,7 +7,7 @@ Con = sqlite3.connect("Database.db")
 Cur = Con.cursor()
 
 def CreateAccount(Email, Username, Password):
-    Data = Cur.execute(f"SELECT * FROM Users WHERE Email = ? OR Username = ?", (Email, Username)).fetchall()
+    Data = Cur.execute("SELECT * FROM Users WHERE Email = ? OR Username = ?", (Email, Username)).fetchall()
     
 
     if len(Data) == 0:
