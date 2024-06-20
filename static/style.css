@@ -1,0 +1,8 @@
+.error {
+    color: black;
+    background-color: red;
+}
+
+label {
+  display: block;
+}
