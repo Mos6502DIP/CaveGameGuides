@@ -3,9 +3,32 @@ from flask import Flask, send_file, request, Response, redirect, render_template
 App = Flask(__name__)
 
 
-con = sqlite3.connect("Database.db")
+Con = sqlite3.connect("Database.db")
+Cur = Con.cursor()
 
+def CreateAccount(Email, Username, Password):
+    Data = Cur.execute(f"SELECT * FROM Users WHERE Email = ? OR Username = ?", (Email, Username)).fetchall()
+    
 
+    if len(Data) == 0:
+        Cur.execute("INSERT INTO Users(Email, Username, Password) VALUES (?, ?, ?)", (Email, Username, Password))
+        print("Account Creation Successful")
+        Con.commit()
+        return True
+    else:
+        print("Account Creation Attempt Made: Error - Already Exists")
+        return False
+    
+
+def Login(Email, Password):
+    Data = Cur.execute("SELECT * FROM Users WHERE Email = ? AND Password = ?", (Email, Password)).fetchall()
+
+    if (len(Data) == 0):
+        print("Account Login Attempt Made: Error - Does Not Exist")
+        return False
+    else:
+        print("Successful Login")
+        return True
 
 
 @App.route('/', methods=['GET', 'POST'])
