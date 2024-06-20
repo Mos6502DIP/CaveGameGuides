@@ -1,11 +1,17 @@
+import sqlite3
 from flask import Flask, send_file, request, Response, redirect, render_template
 App = Flask(__name__)
+
+
+con = sqlite3.connect("Database.db")
+
 
 
 
 @App.route('/', methods=['GET', 'POST'])
 def Landing():
     return render_template("home.html")
+
 
 @App.route('/login', methods=['GET', 'POST'])
 def Login():
@@ -14,6 +20,7 @@ def Login():
         Password = hash(request.form['Password'])
 
     return render_template("login.html")
+
 
 @App.route('/Register', methods=['GET', 'POST'])
 def Register():
