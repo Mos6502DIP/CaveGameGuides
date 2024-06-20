@@ -7,24 +7,9 @@
 
 
 {% block content %}
-    <h1>Login UwU Nya :3</h1>
-    <form method="POST">
-        <div>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" minlength="3" required />
-        </div>
-        <div>
-            <label for="pass">Password (8 charter minium)</label>
-            <input type="password" id="pass" name="password" minlength="8" required />
-        </div>
+   <div class="container">
+      <img src="{{url_for('static', filename='media/home_image.png')}}" alt="Snow" style="width:100%;">
 
-        <input type="submit" value="Sign In">
-
-        <div>
-            {% if response != "Null" %}
-                    <p class="Error">{{ response }}</p>
-            {% endif %}
-        </div>
-
-    </form>
+      <div class="centered">Welcome to the best place for redstone courses.</div>
+    </div>
 {% endblock %}

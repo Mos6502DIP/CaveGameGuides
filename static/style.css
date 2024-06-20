@@ -1,8 +1,58 @@
-.error {
-    color: black;
-    background-color: red;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #3d3939;
 }
 
-label {
-  display: block;
+.topnav {
+  display: flex;
+  justify-content: space-around; /* Spread out the elements */
+  background-color: #222831;
+}
+
+.logo {
+
+  text-align: center;
+}
+
+.topnav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  flex: 1; /* Distribute space evenly */
+  display: flex;
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+}
+
+
+.topnav a:hover {
+  background-color: #6a6565;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #00ADB5;
+  color: white;
+}
+/* I Stole this code because i no longer have motivation to work on this. */
+.container {
+  position: relative;
+  text-align: center;
+  color: dimgray;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: black;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+
 }

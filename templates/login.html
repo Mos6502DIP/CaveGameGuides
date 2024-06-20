@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+
+{% block head %}
+    <title>CaveGameGuides - Home </title>
+{% endblock %}
+
+
+{% block content %}
+    <h1>Login UwU Nya :3</h1>
+    <form method="POST">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="Username" minlength="3" required />
+        </div>
+        <div>
+            <label for="pass">Password (8 charter minium)</label>
+            <input type="password" id="pass" name="Password" minlength="8" required />
+        </div>
+
+        <input type="submit" value="Sign In">
+
+        <div>
+            {% if response != "Null" %}
+                    <p class="Error">{{ response }}</p>
+            {% endif %}
+        </div>
+
+    </form>
+{% endblock %}
