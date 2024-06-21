@@ -4,33 +4,9 @@ body {
   background-color: #3d3939;
 }
 
-.topnav {
-  display: flex;
-  justify-content: space-around; /* Spread out the elements */
-  background-color: #222831;
-}
-
 .logo {
 
   text-align: center;
-}
-
-.topnav a {
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  flex: 1; /* Distribute space evenly */
-  display: flex;
-  justify-content: center; /* Center text horizontally */
-  align-items: center; /* Center text vertically */
-}
-
-
-.topnav a:hover {
-  background-color: #6a6565;
-  color: white;
 }
 
 .topnav a.active {
@@ -55,4 +31,23 @@ body {
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: white;
 
+}
+
+.About {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+  color: #f2f2f2;
+  font-family: "Bookman Old Style";
+  font-size: x-large;
+}
+
+.ui.menu {
+    background: transparent;
+
+}
+
+.item {
+  background-color: #5c5858;
 }

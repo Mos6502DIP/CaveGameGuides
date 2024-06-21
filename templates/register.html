@@ -2,13 +2,13 @@
 
 
 {% block head %}
-    <title>CaveGameGuides - Login </title>
+    <title>CaveGameGuides - Home </title>
 {% endblock %}
 
 
 {% block content %}
     <div class="About">
-        <h1>Login UwU Nya :3</h1>
+        <h1>Sign Up UwU Nya :3</h1>
         <form method="POST">
             <div>
                 <ul>
@@ -29,14 +29,23 @@
                 </ul>
             </div>
 
-            <input type="submit" value="Sign In">
+            <div>
+                <ul>
+                    <label for="Email">Email</label>
+                    <div class="ui input">
+                        <input style="height: 35px" type="text" id="Email" name="Email" minlength="8" required />
+                    </div>
+                </ul>
+            </div>
+
+            <input type="submit" value="Sign Up">
 
             <div>
                 {% if response != "Null" %}
                         <p class="Error">{{ response }}</p>
                 {% endif %}
             </div>
-            <a href="signup">MAke a account silly if you don't have one Nya</a>
+
 
         </form>
     </div>
