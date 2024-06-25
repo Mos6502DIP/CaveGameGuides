@@ -54,6 +54,11 @@ def Register():
 
     return render_template("register.html")
 
+@App.route('/courses', methods=['GET', 'POST'])
+def Courses():
+
+    return render_template("courses.html")
+
 
 if __name__ == '__main__':
-    App.run()
+    App.run( host='0.0.0.0', port=8080, debug=True)
