@@ -2,10 +2,12 @@ import sqlite3
 from flask import Flask, send_file, request, Response, redirect, render_template
 App = Flask(__name__)
 import json
+import hashlib
 
 
-Con = sqlite3.connect("Database.db")
-Cur = Con.cursor()
+def hash_string(password):
+    return hashlib.sha256(password.encode()).hexdigest()
+
 
 def load_json(file):
     with open(file + ".json", 'r') as f:
@@ -13,6 +15,8 @@ def load_json(file):
     return data
 
 def CreateAccount(Email, Username, Password):
+    Con = sqlite3.connect("Database.db")
+    Cur = Con.cursor()
     Data = Cur.execute("SELECT * FROM Users WHERE Email = ? OR Username = ?", (Email, Username)).fetchall()
     
 
@@ -26,15 +30,23 @@ def CreateAccount(Email, Username, Password):
         return False
     
 
-def Login(Email, Password):
-    Data = Cur.execute("SELECT * FROM Users WHERE Email = ? AND Password = ?", (Email, Password)).fetchall()
+def McLogin(Username, Password):
+    Con = sqlite3.connect("Database.db")
+    Cur = Con.cursor()
+    DbPass = Cur.execute("SELECT Password FROM Users WHERE Username = ?", (Username,)).fetchone()[0]
 
-    if (len(Data) == 0):
+    if (len(DbPass) == 0):
+
+
         print("Account Login Attempt Made: Error - Does Not Exist")
         return False
     else:
-        print("Successful Login")
-        return True
+        if DbPass == Password:
+            print("Successful Login")
+            return True
+        else:
+            print("Account Login Attempt Made: Error - Does Not Exist")
+            return False
 
 
 @App.route('/', methods=['GET', 'POST'])
@@ -45,20 +57,35 @@ def Landing():
 @App.route('/login', methods=['GET', 'POST'])
 def Login():
     if request.method == 'POST':
-        Email = hash(request.form['Email'])
-        Password = hash(request.form['Password'])
+        Username = request.form['Username']
+        Password = hash_string(str(request.form['Password']))
+        login = McLogin(Username, Password)
+        if login:
+            response = "Login Successful"
+        else:
+            response = "Login Failed"
 
-    return render_template("login.html")
+        return render_template("login.html", response=response)
+
+    else:
+        return render_template("login.html")
 
 
 @App.route('/register', methods=['GET', 'POST'])
 def Register():
     if request.method == 'POST':
         Username = request.form['Username']
-        Email = hash(request.form['Email'])
-        Password = hash(request.form['Password'])
+        Email = request.form['Email']
+        Password = hash_string(str(request.form['Password']))
+        register = CreateAccount(Email, Username, Password)
+        if register:
+            response = "Account Creation Successful"
+        else:
+            response = "Account Creation Failed"
+        return render_template("register.html", response=response)
+    else:
+        return render_template("register.html")
 
-    return render_template("register.html")
 
 @App.route('/courses', methods=['GET', 'POST'])
 def Courses():

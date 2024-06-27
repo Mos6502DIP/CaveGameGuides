@@ -6,6 +6,18 @@ body {
   background-size: 150px
 }
 
+@media only screen and (max-width: 767px) {
+  .scrolling {
+    flex-wrap: nowrap !important;
+    overflow-x: scroll !important;
+    -webkit-overflow-scrolling: touch !important;
+    overflow-scrolling: touch !important;
+  }
+  .scrolling > .ui.card {
+    flex: 0 0 60% !important;
+  }
+}
+
 .logo {
 
   text-align: center;
@@ -56,4 +68,9 @@ body {
 
 .Courses {
   font-size: 200px;
+}
+
+.ui.container {
+  overflow: auto;
+  white-space: nowrap;
 }
