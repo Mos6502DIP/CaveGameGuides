@@ -7,33 +7,38 @@
 
 
 {% block content %}
-    <div class="Courses">
+    <div class="java">
+        <h1>Java minecraft</h1>
+        <br>
         <div class="ui link cards">
-  <div class="card">
-    <div class="image">
-      <img src="/images/avatar2/large/matthew.png">
-    </div>
-    <div class="content">
-      <div class="header">Matt Giampietro</div>
-      <div class="meta">
-        <a>Friends</a>
-      </div>
-      <div class="description">
-        Matthew is an interior designer living in New York.
-      </div>
-    </div>
-    <div class="extra content">
-      <span class="right floated">
-        Joined in 2013
-      </span>
-      <span>
-        <i class="user icon"></i>
-        75 Friends
-      </span>
-    </div>
-    
-  </div>
-</div>
-    </div>
+            {% for item in info["Java"] %}
+              <div class="card">
+                <div class="image">
+                    {% set image = "media/" + info["Java"][item]["Image"] %}
+                    <img src="{{url_for('static', filename=image)}}">
+                </div>
+                <div class="content">
+                  <div class="header">{{ item }}</div>
+                  <div class="meta">
+                    <a>{{ info["Java"][item]["Difficulty"] }} Difficulty</a>
+                  </div>
+                  <div class="description">
+                    {{ info["Java"][item]["Description"] }}
+                  </div>
+                </div>
+                <div class="extra content">
+                  <span class="right floated">
+                    {{ info["Java"][item]["Ver"] }}
+                  </span>
+                  <span>
+                    <i class="user icon"></i>
+                    {{ info["Java"][item]["Students"] }} Students
+                  </span>
+                </div>
+              </div>
+            {% endfor %}
+        </div>
 
+
+    </div>
 {% endblock %}

@@ -1,0 +1,333 @@
+{
+  "Java": {
+    "4x4 flush door": {
+      "Description": "Learn how to make a cool hidden door now you can with this!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Easy",
+      "Students": 25
+    },
+    "Redstone Trap": {
+      "Description": "Create a sneaky redstone trap to catch your friends off guard!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Medium",
+      "Students": 30
+    },
+    "Secret Passageway": {
+      "Description": "Design and build a secret passageway that blends into your base!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Hard",
+      "Students": 20
+    },
+    "Automatic Farm": {
+      "Description": "Build an efficient automatic farm to harvest crops with ease!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Medium",
+      "Students": 35
+    },
+    "Water Elevator": {
+      "Description": "Construct a water elevator to travel between floors quickly!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Easy",
+      "Students": 40
+    },
+    "Piston Door": {
+      "Description": "Build a seamless piston door for your base!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Medium",
+      "Students": 28
+    },
+    "Hidden Storage Room": {
+      "Description": "Create a hidden storage room to keep your items safe!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Hard",
+      "Students": 15
+    },
+    "Lava Moat": {
+      "Description": "Dig a lava moat around your base for protection!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Easy",
+      "Students": 22
+    },
+    "Ender Pearl Stasis Chamber": {
+      "Description": "Set up an Ender Pearl stasis chamber for quick teleportation!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Hard",
+      "Students": 12
+    },
+    "Villager Trading Hall": {
+      "Description": "Create a villager trading hall for easy access to trades!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Medium",
+      "Students": 18
+    },
+    "XP Farm": {
+      "Description": "Build an XP farm to quickly gain experience points!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Hard",
+      "Students": 27
+    },
+    "Iron Golem Farm": {
+      "Description": "Construct an iron golem farm to collect iron automatically!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Medium",
+      "Students": 33
+    },
+    "Gold Farm": {
+      "Description": "Build a gold farm to gather gold efficiently!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Hard",
+      "Students": 19
+    },
+    "Slime Farm": {
+      "Description": "Create a slime farm to collect slime balls!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Medium",
+      "Students": 21
+    },
+    "Tree Farm": {
+      "Description": "Build a tree farm to harvest wood easily!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Easy",
+      "Students": 26
+    },
+    "Mob Grinder": {
+      "Description": "Create a mob grinder to gather loot from hostile mobs!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Medium",
+      "Students": 29
+    },
+    "Wool Farm": {
+      "Description": "Build a wool farm to collect different colors of wool!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Easy",
+      "Students": 24
+    },
+    "Honey Farm": {
+      "Description": "Create a honey farm to harvest honey bottles and honeycomb!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Medium",
+      "Students": 17
+    },
+    "Pumpkin/Melon Farm": {
+      "Description": "Build a pumpkin and melon farm for a steady food supply!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Easy",
+      "Students": 34
+    },
+    "Cactus Farm": {
+      "Description": "Create a cactus farm to gather cactus for dye and other uses!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Easy",
+      "Students": 31
+    },
+    "Sugar Cane Farm": {
+      "Description": "Build a sugar cane farm to harvest paper and sugar!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Easy",
+      "Students": 38
+    },
+    "Automatic Fish Farm": {
+      "Description": "Create an automatic fish farm to gather fish and treasures!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Medium",
+      "Students": 20
+    },
+    "Cobblestone Generator": {
+      "Description": "Build a cobblestone generator for unlimited cobblestone!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Easy",
+      "Students": 32
+    },
+    "Snow Farm": {
+      "Description": "Create a snow farm to gather snow blocks and snowballs!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Easy",
+      "Students": 27
+    },
+    "Mushroom Farm": {
+      "Description": "Build a mushroom farm for a steady supply of mushrooms!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Medium",
+      "Students": 19
+    },
+    "Bee Farm": {
+      "Description": "Create a bee farm to harvest honey and pollinate crops!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Medium",
+      "Students": 18
+    },
+    "Potion Brewing Station": {
+      "Description": "Set up a potion brewing station for easy potion making!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Hard",
+      "Students": 14
+    },
+    "Enchanting Room": {
+      "Description": "Build an enchanting room to enchant your gear effectively!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Easy",
+      "Students": 36
+    },
+    "Nether Portal Hub": {
+      "Description": "Create a Nether portal hub for fast travel between bases!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Medium",
+      "Students": 23
+    },
+    "End Portal Room": {
+      "Description": "Build an end portal room for easy access to the End dimension!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Hard",
+      "Students": 16
+    },
+    "Fishing Dock": {
+      "Description": "Create a fishing dock to relax and catch fish!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Easy",
+      "Students": 41
+    },
+    "Horse Stable": {
+      "Description": "Build a horse stable to keep your horses safe and organized!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Easy",
+      "Students": 30
+    },
+    "Map Room": {
+      "Description": "Create a map room to keep track of explored areas!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Medium",
+      "Students": 26
+    },
+    "Statue Build": {
+      "Description": "Construct a statue to decorate your base!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Medium",
+      "Students": 25
+    },
+    "Floating Island Base": {
+      "Description": "Build a floating island base for a unique and secure home!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Hard",
+      "Students": 13
+    },
+    "Treehouse": {
+      "Description": "Create a treehouse for a fun and elevated living space!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Easy",
+      "Students": 29
+    },
+    "Underground Base": {
+      "Description": "Build an underground base to stay hidden and secure!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Medium",
+      "Students": 22
+    },
+    "Sky Base": {
+      "Description": "Construct a sky base for a spectacular view and safety!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Hard",
+      "Students": 17
+    },
+    "Medieval Castle": {
+      "Description": "Build a medieval castle to rule your realm!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Hard",
+      "Students": 11
+    },
+    "Modern House": {
+      "Description": "Create a modern house with sleek and stylish design!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Medium",
+      "Students": 28
+    },
+    "Pirate Ship": {
+      "Description": "Construct a pirate ship to sail the seas!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Hard",
+      "Students": 14
+    },
+    "Space Station": {
+      "Description": "Build a space station for an out-of-this-world base!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Hard",
+      "Students": 16
+    },
+    "Japanese Pagoda": {
+      "Description": "Create a Japanese pagoda for a touch of Eastern architecture!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Medium",
+      "Students": 23
+    },
+    "Aquarium": {
+      "Description": "Build an aquarium to showcase aquatic life!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Easy",
+      "Students": 32
+    },
+    "Underground Farm": {
+      "Description": "Create an underground farm to grow crops away from danger!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Medium",
+      "Students": 27
+    },
+    "Desert Base": {
+      "Description": "Build a desert base to survive in the arid landscape!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Hard",
+      "Students": 12
+    },
+    "Jungle Treehouse": {
+      "Description": "Create a jungle treehouse to live among the trees!",
+      "Image": "placeholder.jpg",
+      "Ver": "Vanilla 21.1.8",
+      "Difficulty": "Medium",
+      "Students": 18
+    }
+  }
+}

@@ -1,10 +1,16 @@
 import sqlite3
 from flask import Flask, send_file, request, Response, redirect, render_template
 App = Flask(__name__)
+import json
 
 
 Con = sqlite3.connect("Database.db")
 Cur = Con.cursor()
+
+def load_json(file):
+    with open(file + ".json", 'r') as f:
+        data = json.load(f)
+    return data
 
 def CreateAccount(Email, Username, Password):
     Data = Cur.execute("SELECT * FROM Users WHERE Email = ? OR Username = ?", (Email, Username)).fetchall()
@@ -56,8 +62,8 @@ def Register():
 
 @App.route('/courses', methods=['GET', 'POST'])
 def Courses():
-
-    return render_template("courses.html")
+    info = load_json("course_info")
+    return render_template("courses.html", info=info)
 
 
 if __name__ == '__main__':
