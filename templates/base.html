@@ -19,7 +19,7 @@
         </div>
         <div class="ui menu">
             <div class="item">
-                <div class="ui primary button"><a href="login"  style="color: white">Log In</a></div>
+                <div class="ui primary button"><a href="/login"  style="color: white">Log In</a></div>
             </div>
             <div class="item">
                 <div class="ui button" ><a href="/register" style="color: black">Sign Up</a></div>
@@ -33,15 +33,18 @@
 
             <div class="right item">
                 <div class="ui icon input">
-                    <input style="height: 35px; type="text" placeholder="Search...">
+                    <input style="height: 35px;" type="text" placeholder="Search...">
                     <i class="search icon"></i>
 
-            </div>
-            <div class="ui button"><a href="/" style="color: black">{{ Username }}</a></div>
-  </div>
+                </div>
+            {% if Username != None %}
+                <div class="ui button"><a href="/" style="color: black">{{ Username }}</a></div>
+            {% endif %}
         </div>
-    <div class="content">
+        </div>
+        <div class="content">
         {% block content %}{% endblock %}
+        </div>
     </div>
 
 </body>

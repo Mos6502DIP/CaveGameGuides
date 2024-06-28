@@ -93,17 +93,11 @@ def McLogin(Username, Password):
             print("Account Login Attempt Made: Error - Does Not Exist")
             return False
 
-def get_username():
-    if "Username" in session:
-        return session["Username"]
-    else:
-        return None
-
-
+# oeubfaod;ifaiuj;sbnbfwqui.sh
 
 @App.route('/', methods=['GET', 'POST'])
 def Landing():
-    username = get_username()
+    username = "session" # UwU
     return render_template("home.html", Username=username)
 
 
@@ -116,7 +110,7 @@ def Login():
         if login:
             response = "Login Successful"
             session.permanent = True
-            session["Username"] = Username
+            session["user"] = username
         else:
             response = "Login Failed"
 
@@ -182,4 +176,4 @@ def Courses():
 
 
 if __name__ == '__main__':
-    App.run( host='0.0.0.0', port=5000, debug=True)
+    App.run( host='0.0.0.0', port=8080, debug=True)
