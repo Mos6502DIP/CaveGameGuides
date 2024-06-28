@@ -105,7 +105,7 @@ def Login():
         else:
             response = "Login Failed"
 
-        return render_template("login.html", response=response)
+        return render_template("login.html", response=response[])
 
     else:
         return render_template("login.html")
