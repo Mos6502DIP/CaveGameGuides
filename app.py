@@ -104,7 +104,7 @@ def get_username():
 @App.route('/', methods=['GET', 'POST'])
 def Landing():
     username = get_username()
-    return render_template("home.html", Username=username)
+    return render_template("home.html", username=username)
 
 
 @App.route('/login/', methods=['GET', 'POST'])
@@ -120,10 +120,12 @@ def Login():
         else:
             response = "Login Failed"
 
-        return render_template("login.html", response=response)
+        username = get_username()
+        return render_template("login.html", response=response, Username=username)
 
     else:
-        return render_template("login.html")
+        username = get_username()
+        return render_template("login.html", username=username)
 
 
 @App.route('/register/', methods=['GET', 'POST'])
@@ -151,9 +153,11 @@ def Register():
             response = "Please verify your email address (We have sent you a confirmation email)"
         else:
             response = "Account Creation Failed"
-        return render_template("register.html", response=response)
+            username = get_username()
+        return render_template("register.html", response=response, username=username)
     else:
-        return render_template("register.html")
+        username = get_username()
+        return render_template("register.html" , username=username)
 
 
 @App.route('/verify/<code>/', methods=['GET', 'POST'])
@@ -166,11 +170,13 @@ def verify(code):
                 return render_template("verify.html")
             else:
                 response = "Account Creation Failed"
-                return render_template("register.html", response=response)
+                username = get_username()
+                return render_template("register.html", response=response, username=username)
 
         else:
             response = "Account Creation Failed"
-            return render_template("register.html", response=response)
+            username = get_username()
+            return render_template("register.html", response=response, username=username)
 
 
 
@@ -178,7 +184,8 @@ def verify(code):
 @App.route('/courses/', methods=['GET', 'POST'])
 def Courses():
     info = load_json("course_info")
-    return render_template("courses.html", info=info)
+    username = get_username()
+    return render_template("courses.html", info=info, username=username)
 
 
 if __name__ == '__main__':

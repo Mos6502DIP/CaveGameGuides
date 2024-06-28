@@ -37,8 +37,8 @@
                     <i class="search icon"></i>
 
                 </div>
-            {% if Username != None %}
-                <div class="ui button"><a href="/" style="color: black">{{ Username }}</a></div>
+            {% if (Username != None) or (Username != "None") %}
+                <div class="ui button"><a href="/" style="color: black">{{ username }}</a></div>
             {% endif %}
         </div>
         </div>
