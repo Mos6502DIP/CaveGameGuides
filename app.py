@@ -97,7 +97,20 @@ def get_username():
     if "Username" in session:
         return session["Username"]
     else:
-        return None
+        return "None"
+
+
+def get_courses(username):
+    print(username)
+    info = load_json("course_info")
+    user_course = ["Redstone Trap", "Ender Pearl Stasis Chamber",  "Tree Farm", "Automatic Fish Farm"]
+    usr_re = {}
+    for item in info["Java"]:
+        if item in user_course:
+            usr_re[item] = info["Java"][item]
+
+    return usr_re
+
 
 
 
@@ -117,11 +130,13 @@ def Login():
             response = "Login Successful"
             session.permanent = True
             session["Username"] = Username
+
+            return redirect("/dashboard")
         else:
             response = "Login Failed"
 
-        username = get_username()
-        return render_template("login.html", response=response, Username=username)
+            username = get_username()
+            return render_template("login.html", response=response, Username=username)
 
     else:
         username = get_username()
@@ -151,6 +166,7 @@ def Register():
             message = f"http://127.0.0.1:5000/verify/{ComfirmId}"
             ep.send_email(sender_email, sender_password, recipient_email, subject, message)
             response = "Please verify your email address (We have sent you a confirmation email)"
+            username = get_username()
         else:
             response = "Account Creation Failed"
             username = get_username()
@@ -186,6 +202,25 @@ def Courses():
     info = load_json("course_info")
     username = get_username()
     return render_template("courses.html", info=info, username=username)
+
+@App.route('/dashboard', methods=['GET', 'POST'])
+def dashboard():
+    if get_username() is not "None":
+        return render_template("dashboard.html", username=get_username(),  info=get_courses(get_username()))
+
+    else:
+        return redirect("/login")
+
+
+@App.route('/logout', methods=['GET', 'POST'])
+def logout():
+    session.clear()
+    username = get_username()
+    response = "Logout Successful"
+    return redirect("/")
+
+
+
 
 
 if __name__ == '__main__':

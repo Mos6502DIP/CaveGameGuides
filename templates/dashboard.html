@@ -11,7 +11,37 @@
 <div class="content">
     <h1>Dashboard</h1>
     <p class="usernameInfo">{{Username}}</p>
-    <p class="usernameInfo">Email</p>
+    <h1>Your Courses</h1>
+        <br>
+
+            <div class="ui link cards">
+                {% for item in info.keys() %}
+                  <div class="ui card">
+                    <div class="image">
+                        {% set image = "media/" + info[item]["Image"] %}
+                        <img src="{{url_for('static', filename=image)}}">
+                    </div>
+                    <div class="content">
+                      <div class="header">{{ item }}</div>
+                      <div class="meta">
+                        <a>{{ info[item]["Difficulty"] }} Difficulty</a>
+                      </div>
+                      <div class="description">
+                        {{ info[item]["Description"] }}
+                      </div>
+                    </div>
+                    <div class="extra content">
+                      <span class="right floated">
+                        {{ info[item]["Ver"] }}
+                      </span>
+                      <span>
+                        <i class="user icon"></i>
+                        {{ info[item]["Students"] }} Students
+                      </span>
+                    </div>
+                  </div>
+                {% endfor %}
+            </div>
 </div>
 
 

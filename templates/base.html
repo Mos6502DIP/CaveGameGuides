@@ -15,33 +15,45 @@
 <body>
     <div class="banner">
         <div class="logo">
-            <img src="{{url_for('static', filename='media/logo.png')}}">
+            <a href="/"><img src="{{url_for('static', filename='media/logo.png')}}"></a>
         </div>
         <div class="ui menu">
-            <div class="item">
-                <div class="ui primary button"><a href="/login"  style="color: white">Log In</a></div>
-            </div>
-            <div class="item">
-                <div class="ui button" ><a href="/register" style="color: black">Sign Up</a></div>
-            </div>
-            <div class="item">
-                <div class="ui button"><a href="/courses" style="color: black">Courses</a></div>
-            </div>
-            <div class="item">
-                <div class="ui button"><a href="/dashboard" style="color: black">DashBoard</a></div>
-            </div>
-
-            <div class="right item">
-                <div class="ui icon input">
-                    <input style="height: 35px;" type="text" placeholder="Search...">
-                    <i class="search icon"></i>
-
+            {% if username != "None" %}
+                <div class="item">
+                    <div class="ui primary button"><a href="/logout"  style="color: white">Log out</a></div>
                 </div>
-            {% if (Username != None) or (Username != "None") %}
-                <div class="ui button"><a href="/" style="color: black">{{ username }}</a></div>
+
+
+                <div class="item">
+                    <div class="ui button"><a href="/courses" style="color: black">Courses</a></div>
+                </div>
+
+                <div class="right item">
+                    <div class="ui button"><a href="/dashboard" style="color: black">{{ username }}</a></div>
+                </div>
+
+            {% else %}
+                <div class="item">
+                    <div class="ui primary button"><a href="/login"  style="color: white">Log In</a></div>
+                </div>
+                <div class="item">
+                    <div class="ui button" ><a href="/register" style="color: black">Sign Up</a></div>
+                </div>
+                <div class="item">
+                    <div class="ui button"><a href="/courses" style="color: black">Courses</a></div>
+                </div>
+
+
+                <div class="right item">
+                    <div class="ui icon input">
+                        <input style="height: 35px;" type="text" placeholder="Search...">
+                        <i class="search icon"></i>
+
+                    </div>
             {% endif %}
         </div>
         </div>
+
         <div class="content">
         {% block content %}{% endblock %}
         </div>
